@@ -5,6 +5,10 @@ int main() {
     char nomeCliente[50], nomeProduto[50];
 
 
-    printf("Digite o ");
-    scanf("%f", &produto);
+    printf("Digite o nome do produto: ", &nomeProduto);
+    scanf("%s", &nomeProduto);
+
+    printf("O nome do produto é %s", &nomeProduto);
+
+    return 0;
 }
