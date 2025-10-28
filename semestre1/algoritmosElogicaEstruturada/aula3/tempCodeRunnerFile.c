@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-//Inicio do programa
 int main() {
     //Variáveis // Declara as variáveis que serão do tipo float(numeros decimais)
     char nomeCliente[50], nomeProduto[50];
@@ -12,6 +11,7 @@ int main() {
     const float taxaICMS =  0.06;
     const float taxaRevenda = 0.1;
 
+    //Inicio do programa
     //Pede e lê o nome do cliente
     printf("Digite seu nome de cliente: ");
     scanf("%s", nomeCliente);
@@ -33,7 +33,7 @@ int main() {
     printf("Digite o valor do desconto de transporte disponivel: (ex:10 para 10 por cento)");
     scanf("%f", &percentualTransporte);
 
-    //Calculos
+
     transporte = valorProduto * (percentualTransporte /100);
     precoFinalTransp = transporte * (1 - percentualTransporte/100);
 
@@ -41,12 +41,11 @@ int main() {
     produtoCDesconto = valorProduto * (1 - desconto/100);
     precoFinal = produtoCDesconto + precoFinalTransp;
 
-    //Dados de saida
+
     printf("Produto com desconto: R$ %.2f\n", produtoCDesconto);
     printf("Frete com desconto: R$ %.2f\n", precoFinalTransp);
     printf("Total a pagar: R$ %.2f\n", precoFinal);
 
-    //Finaliza o programa em C
+   
     return 0;
 }
-
